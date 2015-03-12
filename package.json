@@ -1,0 +1,34 @@
+{
+  "name": "CoffeeScript-template",
+  "version": "0.0.1",
+  "description": "Bootstrap template for coffeeScript projects",
+  "main": "main.coffee",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LesleyDuyndam/coffeeScript-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LesleyDuyndam/coffeeScript-template/issues"
+  },
+  "keywords": [
+    "CoffeeScript",
+    "Template"
+  ],
+  "author": "Lesley Duyndam <lesleyduyndam@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-html-reporter": "^0.2.6",
+    "coffee-script": "^1.9.1",
+    "grunt-karma": "^0.10.1",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-jasmine-html-reporter-livereload": "^1.0.0"
+  }
+}
