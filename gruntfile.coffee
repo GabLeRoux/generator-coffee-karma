@@ -32,5 +32,5 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
 
-  #   Default task to run on > grunt
-    grunt.registerTask( 'default', ['watch'])
+  #   Default task
+#    grunt.registerTask( 'default', ['coffee'])
