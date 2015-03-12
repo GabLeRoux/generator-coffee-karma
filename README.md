@@ -1,4 +1,4 @@
-# CoffeeScript + Karma + Grunt Bootstrap
+# CoffeeScript + Karma + Grunt | Bootstrap
 Build a new CoffeeScript project, test it with karma (Jasmine), run it with Grunt.
 
 ### 1. Preparing
