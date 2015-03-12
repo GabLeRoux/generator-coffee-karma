@@ -2,8 +2,8 @@
 Build a new CoffeeScript project, test it with karma (Jasmine), run it with Grunt.
 
 ### 1. Preparing
-After cloning the file to your local machine, you have to modify the package.json file with your projects name, version and optionally a description. 
-This is important, because Grunt uses the given name and version for automated file naming by compiling. If you leave the defaults, your files will be named "CoffeeScript-Karma-Grunt_0.0.1.min.js" for example.
+After cloning the file to your local machine, you have to modify the package.json file with your projects name, version and optionally description. 
+This is important, because grunt use the given name and version for automated file naming by compiling. If you leave the defaults, your files will be named "CoffeeScript-Karma-Grunt-0.0.1.min.js" for example.
 
 ```json
 {
