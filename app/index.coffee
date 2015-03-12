@@ -5,30 +5,35 @@ path = require 'path'
 yeoman = require 'yeoman-generator'
 GitHub = require 'github'
 
+# Fetches the user from github
 githubGetUser = (name, callback) ->
+
+  # Get the proxy
   proxy = process.env.http_proxy or process.env.HTTP_PROXY or process.env.https_proxy or process.env.HTTPS_PROXY or null
+
+  # Set the version to the github options
   options = version : '3.0.0'
 
+  # Check if proxy exists, if so, parse it
   if proxy
     proxy = url.parse proxy
 
+    # Add the proxy to the github options
     options.proxy =
       host: proxy.hostname
       port: proxy.port
 
   github = new GitHub( options )
 
+  # Fetch the actual user data from the github server
   github.user.getFrom( user: name, (err, res) ->
     throw err  if err
     callback JSON.parse JSON.stringify res
-
   )
 
 
-
-
-
-class CoffeeModuleGenerator extends yeoman.generators.Base
+#
+class CoffeeKarmaGenerator extends yeoman.generators.Base
   constructor: (args, options) ->
     super
     @currentYear = (new Date()).getFullYear()
@@ -90,8 +95,7 @@ class CoffeeModuleGenerator extends yeoman.generators.Base
     @template 'src/coffee/classes/example.class.coffee', "src/coffee/classes/#{@appname}.class.coffee"
 
   tests: ->
-    @mkdir 'test'
     @template 'test/coffee/index.test.coffee', "test/coffee/#{@appname}.test.coffee"
     @template 'test/coffee/classes/example.class.test.coffee', "test/coffee/classes/#{@appname}.class.test.coffee"
 
-module.exports = CoffeeModuleGenerator
+module.exports = CoffeeKarmaGenerator

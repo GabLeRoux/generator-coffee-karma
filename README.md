@@ -22,6 +22,29 @@ yo
 
 That's all there is to it! You can start coding, testing and building right out of the box!
 
+Yeoman will create a project with the following structure
+
+    .
+    ├── dist
+    │   └── projectName.min.js ( Will be generated when run 'grunt uglify' )
+    ├── src
+    |   └── coffee
+    │       ├── projectName.coffee
+    │       └── classes
+    │           └── main.class.coffee
+    ├── test
+    |   └── coffee    
+    │       ├── projectName.test.coffee
+    │       └── classes
+    │           └── main.class.test.coffee
+    ├── .gitignore
+    ├── bowerrc
+    ├── bower.json
+    ├── package.json
+    ├── gruntfile.coffee
+    ├── karma.config.coffee
+    └── README.md
+
 ## Usage
 
 ### 1. Testing
