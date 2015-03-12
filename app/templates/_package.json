@@ -1,7 +1,7 @@
 {
   "name": "<%= slug %>",
   "version": "0.0.1",
-  "description": "Awesome CoffeeScript project, generated with generator-coffeescript-karma",
+  "description": "<%= description $>",
   "keywords": [
     "keyword1",
     "keyword2"

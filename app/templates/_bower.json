@@ -1,0 +1,18 @@
+{
+  "name": "<%= slug %>",
+  "version": "0.0.1",
+  "homepage": "<%= githubUrl %>/<%= slug %>",
+  "authors": [
+    {
+      "name": "<%= realname %>",
+      "email": "<%= email %>"
+    }
+  ],
+  "description": "<%= description %>",
+  "main": "./dist/<%= slug %>.min.js",
+  "repository": {
+    "type": "git",
+    "url": "<%= githubUrl %>/<%= slug %>.git"
+  },
+  "license": "MIT"
+}

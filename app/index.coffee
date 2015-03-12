@@ -42,31 +42,37 @@ class CoffeeModuleGenerator extends yeoman.generators.Base
       default: 'someuser'
     ,
       name: 'moduleName'
-      message: 'What\'s the name of your module?'
+      message: 'What\'s the name of your project?'
       default: @_.slugify(@appname)
+    ,
+      name: 'moduleDescription'
+      message: 'Can you give me a short description of your project?'
+      default: 'Awesome CoffeeScript project, build with Yeoman, generator-coffeescript-karma'
     ]
 
     @prompt prompts, (props) =>
-      @githubUser = props.githubUser
-      @appname    = props.moduleName
-      @slug       = @_.slugify @appname
+      @githubUser   = props.githubUser
+      @appname      = props.moduleName
+      @description  = props.moduleDescription
+      @slug         = @_.slugify @appname
       done()
 
   userInfo: ->
     done = @async()
 
     githubUserInfo @githubUser, (res) =>
-      @realname = res.name
-      @email = res.email
-      @githubUrl = res.html_url
+      @realname   = res.name
+      @email      = res.email
+      @githubUrl  = res.html_url
       done()
 
   projectfiles: ->
     @template '_package.json', 'package.json'
     @template '_README.md', 'README.md'
-    @template '_gruntfile.coffee', 'gruntfile.coffee'
-    @template '_karma.config.coffee', 'karma.config.coffee'
+    @template 'gruntfile.coffee'
     @template '_bower.json', 'bower.json'
+    @template 'bowerrc'
+    @template 'karma.config.coffee'
 
   gitfiles: ->
     @copy '_gitignore', '.gitignore'
