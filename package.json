@@ -1,7 +1,7 @@
 {
   "name": "CoffeeScript-Karma",
   "version": "0.0.1",
-  "description": "Build a new CoffeeScript project, test it with karma (Jasmine)",
+  "description": "Build a new CoffeeScript project, test it with karma (Jasmine), run it with Grunt",
   "main": "CoffeeScript-Karma-0.0.1.min.js",
   "scripts": {
     "test": "test"
