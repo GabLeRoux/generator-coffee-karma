@@ -1,40 +1,38 @@
 {
-  "name": "generator-CoffeeScript-Karma-Grunt",
-  "version": "0.0.2",
-  "description": "Build a new CoffeeScript project, test it with karma (Jasmine), run it with Grunt",
-  "main": "CoffeeScript-Karma-0.0.1.min.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LesleyDuyndam/CoffeeScript-Karma-Grunt.git"
-  },
-  "bugs": {
-    "url": "https://github.com/LesleyDuyndam/CoffeeScript-Karma-Grunt/issues"
-  },
+  "name": "generator-coffee-karma",
+  "version": "0.0.5",
+  "description": "A generator for Yeoman to scaffold a CoffeeScript project, easily testable with Karma (Jasmine)",
+  "files": [
+    "app"
+  ],
   "keywords": [
+    "yeoman-generator",
     "CoffeeScript",
     "Karma",
-    "Grunt",
-    "Bootstrap",
-    "Template",
-    "init"
+    "Jasmine"
   ],
-  "author": "Lesley Duyndam <lesleyduyndam@gmail.com>",
-  "license": "ISC",
+  "homepage": "https://github.com/lesleyduyndam/generator-coffeescript-karma",
+  "bugs": "https://github.com/lesleyduyndam/generator-coffeescript-karma/issues",
+  "author": {
+    "name": "Lesley Duyndam",
+    "email": "lesleyduyndam@gmail.com",
+    "url": "https://github.com/lesleyduyndam"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lesleyduyndam/generator-coffeescript-karma.git"
+  },
+  "remote": "origin",
+  "dependencies": {
+    "yeoman-generator": "^0.17.7",
+    "coffee-errors": "^0.8.5",
+    "coffee-script": "^1.8.0",
+    "github": "^0.2.2"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "coffee-script": "^1.9.1",
-    "grunt-contrib-coffee": "^0.13.0",
-    "grunt-contrib-uglify": "^0.8.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-karma": "^0.10.1",
-    "jasmine-core": "^2.2.0",
-    "karma": "^0.12.31",
-    "karma-chrome-launcher": "^0.1.7",
-    "karma-coffee-preprocessor": "^0.2.1",
-    "karma-html-reporter": "^0.2.6",
-    "karma-jasmine": "^0.3.5",
-    "karma-jasmine-html-reporter-livereload": "^1.0.0"
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.3.0"
   }
 }
