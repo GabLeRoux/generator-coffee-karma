@@ -24,17 +24,19 @@ npm install
 Make sure you have installed nodeJS before running npm commands. Download nodeJS at
 
 ### 3. Testing
-Great, you are ready to write awesome code! But off course, you want to test. Start Karma by running the 'grunt karma' command in the terminal.
+Great, you are ready to write awesome code! But off course, you want to run tests, lots and lots of tests. Start Karma by running the 'grunt karma' command in the terminal.
 
 ```
 grunt karma
 ```
 
-Karma outputs the test reports in the terminal. If you prefer a html based test report go to 'server/port/debug.html' while 'grunt karma' is running. Most likely this url is;
+Karma outputs the test reports directly in the terminal. If you prefer a html based test report go to 'server/port/debug.html' while 'grunt karma' is running. Most likely this url is;
 
 ```
 http://localhost:9876/debug.html
 ```
+
+> It is possible you have to refresh to get the last report
 
 ### 4. Compiling
 If you would like to compile coffeeScript automatically on file change, activate the watcher. This is easily done by running the 'grunt watch' command in the terminal.
