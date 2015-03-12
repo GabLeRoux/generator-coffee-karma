@@ -1,6 +1,6 @@
 {
   "name": "generator-coffee-karma",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A generator for Yeoman to scaffold a CoffeeScript project, easily testable with Karma (Jasmine)",
   "files": [
     "app"
@@ -23,6 +23,7 @@
     "type": "git",
     "url": "https://github.com/lesleyduyndam/generator-coffeescript-karma.git"
   },
+  "remote": "origin",
   "dependencies": {
     "yeoman-generator": "^0.17.7",
     "coffee-errors": "^0.8.5",
