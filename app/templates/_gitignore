@@ -1,0 +1,12 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+
+.idea/coffeeScript-template.iml
+
+## Directory-based project format:
+.idea/
+
+## Exlude node files from git (Run npm install after cloning)
+node_modules/
+
+## Exclude bower files from git (Run bower install after cloning)
+#dist/bower/

@@ -7,7 +7,7 @@
   /*
     First example class to get you started.
   
-    Test file in test/coffee/main.test.coffee
+    Test file in test/coffee/index.test.coffee
    */
 
   root.ITEM = (function() {
