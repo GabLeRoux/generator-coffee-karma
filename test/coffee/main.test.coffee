@@ -8,7 +8,13 @@
     ( run: grunt karma )
 ###
 
-describe 'To test if the main.coffee works', ->
-  it 'should add the params', ->
-    calculator = new CALCULATOR()
-    expect( calculator.add(1, 4, 5) ).toBe( 10 )
+describe 'The store', ->
+
+  it 'should have a name', ->
+    expect( getName() ).toEqual( 'apples' )
+
+  it 'should be adding single products by restocking', ->
+    expect( restock( 5 ) ).toBe( 5 )
+
+  it 'should be removing products from stock when sold', ->
+    expect( sell( 1 ) ).toBe( 4 )

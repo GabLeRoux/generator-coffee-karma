@@ -1,8 +1,8 @@
 {
-  "name": "CoffeeScript-template",
+  "name": "CoffeeScript-Karma",
   "version": "0.0.1",
-  "description": "Bootstrap template for coffeeScript projects",
-  "main": "main.coffee",
+  "description": "Build a new CoffeeScript project, test it with karma (Jasmine)",
+  "main": "CoffeeScript-Karma-0.0.1.min.js",
   "scripts": {
     "test": "test"
   },
