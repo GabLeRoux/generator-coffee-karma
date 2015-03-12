@@ -1,6 +1,6 @@
 {
   "name": "generator-coffee-karma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A generator for Yeoman to scaffold a CoffeeScript project, easily testable with Karma (Jasmine)",
   "files": [
     "app"
@@ -29,5 +29,9 @@
     "coffee-script": "^1.8.0",
     "github": "^0.2.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.3.0"
+  }
 }
