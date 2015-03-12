@@ -43,7 +43,7 @@ That's all there is to it! You can start coding, testing and building right out 
 
 ## Usage
 
-### 1. Testing
+### Testing
 Great, you are ready to write awesome code! But off course, you want to run tests, lots and lots of tests. Start Karma by running the 'grunt karma' command in the terminal.
 
 ```
@@ -58,7 +58,7 @@ http://localhost:9876/debug.html
 
 > It is possible you have to refresh to get the last report
 
-### 2. Compiling
+### Compiling
 If you would like to compile coffeeScript automatically on file change, activate the watcher. This is easily done by running the 'grunt watch' command in the terminal.
 
 ```
@@ -73,7 +73,7 @@ grunt coffee
 
 > Compiled coffeeScript files are stored in the 'src/javascript' folder.
 
-### 3. Building
+### Building
 If your code is ready for production, simply run 'grunt uglify' in your terminal. This will uglify the most recent compiled coffeeScript files in the 'src/javascript' directory.
 
 ```
