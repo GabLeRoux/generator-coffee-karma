@@ -1,6 +1,6 @@
 {
-  "name": "CoffeeScript-Karma",
-  "version": "0.0.1",
+  "name": "CoffeeScript-Karma-Grunt",
+  "version": "0.0.2",
   "description": "Build a new CoffeeScript project, test it with karma (Jasmine), run it with Grunt",
   "main": "CoffeeScript-Karma-0.0.1.min.js",
   "scripts": {
@@ -8,14 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LesleyDuyndam/coffeeScript-template.git"
+    "url": "https://github.com/LesleyDuyndam/CoffeeScript-Karma-Grunt.git"
   },
   "bugs": {
-    "url": "https://github.com/LesleyDuyndam/coffeeScript-template/issues"
+    "url": "https://github.com/LesleyDuyndam/CoffeeScript-Karma-Grunt/issues"
   },
   "keywords": [
     "CoffeeScript",
-    "Template"
+    "Karma",
+    "Grunt",
+    "Bootstrap",
+    "Template",
+    "init"
   ],
   "author": "Lesley Duyndam <lesleyduyndam@gmail.com>",
   "license": "ISC",
