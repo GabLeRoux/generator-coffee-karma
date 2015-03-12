@@ -2,27 +2,20 @@
 A generator for Yeoman to scaffold CoffeeScript projects, test it with karma (Jasmine), run tasks with Grunt.
 
 ## Installation
-First you need to install the generator on your machine. Run the next command in the terminal
+First you need to install the generator on your machine. Run the next command in the terminal;
 
 ```
 npm install -g generator-coffeescript-karma
 ```
 
-Make sure you're in the root directory of your new project. if not already, run the next command in the terminal
 
-```
-cd path/to/projectFolder
-```
-
-Run yo and select the 'Coffee Karma' generator
+Run yo inside the project root directory and select the 'Coffee Karma' generator.
 
 ```
 yo
 ```
 
-That's all there is to it! You can start coding, testing and building right out of the box!
-
-Yeoman will create a project with the following structure
+Yeoman will create a project with the following structure:
 
     .
     ├── dist
@@ -44,6 +37,9 @@ Yeoman will create a project with the following structure
     ├── gruntfile.coffee
     ├── karma.config.coffee
     └── README.md
+
+That's all there is to it! You can start coding, testing and building right out of the box!
+
 
 ## Usage
 
