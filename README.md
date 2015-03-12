@@ -59,7 +59,7 @@ http://localhost:9876/debug.html
 > It is possible you have to refresh to get the last report
 
 ### Compiling
-If you would like to compile coffeeScript automatically on file change, activate the watcher. This is easily done by running the 'grunt watch' command in the terminal.
+If you would like to compile coffeeScript automatically on file change, activate the grunt watcher. This is easily done by running the 'grunt watch' command in the terminal.
 
 ```
 grunt watch
@@ -74,8 +74,16 @@ grunt coffee
 > Compiled coffeeScript files are stored in the 'src/javascript' folder.
 
 ### Building
-If your code is ready for production, simply run 'grunt uglify' in your terminal. This will uglify the most recent compiled coffeeScript files in the 'src/javascript' directory.
+If your code is ready for production, simply run 'grunt' in your terminal. This will uglify the most recent compiled coffeeScript files from the 'src/javascript' directory and stores the 'projectName.min.js' in './dist'.
+
+> Make sure to compile CoffeeScripts first 'grunt coffee'
 
 ```
-grunt uglify
+grunt
 ```
+
+Will output
+
+    .
+    └── dist
+        └── projectName.min.js
