@@ -1,5 +1,5 @@
 # CoffeeScript Init Template
-Basic template for test driven CoffeeScript development.
+Build a new CoffeeScript project, test it with karma (Jasmine).
 
 ### 1. Preparing
 After cloning the file to your local environment, you have to modify the package.json file with your projects name, version and optionally description. 
