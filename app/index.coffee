@@ -5,6 +5,7 @@ path = require 'path'
 yeoman = require 'yeoman-generator'
 GitHubApi = require 'github'
 
+# The generator auto adds all the github information if specified
 githubUserInfo = (name, cb) ->
   proxy = process.env.http_proxy or process.env.HTTP_PROXY or process.env.https_proxy or process.env.HTTPS_PROXY or null
   githubOptions = version: '3.0.0'
@@ -62,20 +63,21 @@ class CoffeeModuleGenerator extends yeoman.generators.Base
 
   projectfiles: ->
     @template '_package.json', 'package.json'
-    @template 'README.md'
-    @template 'LICENSE'
+    @template '_README.md', 'README.md'
     @template '_gruntfile.coffee', 'gruntfile.coffee'
+    @template '_karma.config.coffee', 'karma.config.coffee'
+    @template '_bower.json', 'bower.json'
 
   gitfiles: ->
     @copy '_gitignore', '.gitignore'
 
   app: ->
     @template 'src/coffee/index.coffee', "src/coffee/#{@appname}.coffee"
-    @template 'src/coffee/classes/example.coffee', "src/coffee/classes/#{@appname}.coffee"
+    @template 'src/coffee/classes/example.class.coffee', "src/coffee/classes/#{@appname}.class.coffee"
 
   tests: ->
     @mkdir 'test'
     @template 'test/coffee/index.test.coffee', "test/coffee/#{@appname}.test.coffee"
-    @template 'test/coffee/classes/main.test.coffee', "test/coffee/classes/#{@appname}.test.coffee"
+    @template 'test/coffee/classes/example.class.test.coffee', "test/coffee/classes/#{@appname}.class.test.coffee"
 
 module.exports = CoffeeModuleGenerator

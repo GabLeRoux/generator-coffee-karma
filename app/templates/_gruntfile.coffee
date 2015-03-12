@@ -16,7 +16,7 @@ module.exports = (grunt) ->
       uglify: {
         my_target:
           files:
-            "dist/<%= pkg.name %>-<%= pkg.version %>.min.js": ["src/javascript/classes/<%= pkg.name %>.classes.js", "src/javascript/<%= pkg.name %>.js"]
+            "dist/<%= pkg.name %>.min.js": ["src/javascript/classes/<%= pkg.name %>.classes.js", "src/javascript/<%= pkg.name %>.js"]
       },
       watch: {
         coffee: {
