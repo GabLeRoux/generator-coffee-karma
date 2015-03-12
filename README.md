@@ -13,7 +13,6 @@ This template depends on a few dependencies for;
 	
 - Compiling
 	- CoffeeScript
-	- Less
 	
 ### Install Dependencies
 Open your terminal and cd inside the project root. Run the following command;
