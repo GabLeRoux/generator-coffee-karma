@@ -1,19 +1,19 @@
 # CoffeeScript Init Template
 Basic template for test driven CoffeeScript development.
 
-## Dependencies
-This template depends on a few dependencies for;
+### Prepare for installation
+After cloning the file to your local environment, you have to change a few things first. This is important for file further file naming.
+Go to package.json in the root folder, and edit the following attributes;
 
-- task Running
-	- Grunt
-	
-- Testing
-	- Karma
-	- Jasmine
-	
-- Compiling
-	- CoffeeScript
-	
+```json
+{
+  "name": "your_project_name",
+  "version": "0.0.1",
+  "description": "your projects description"
+}
+```
+
+
 ### Install Dependencies
 Open your terminal and cd inside the project root. Run the following command;
 

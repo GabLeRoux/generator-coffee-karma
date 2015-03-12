@@ -1,7 +1,5 @@
 module.exports = (grunt) ->
 
-    projectName = 'template'
-
   #    Project configuration.
     grunt.initConfig {
       pkg: grunt.file.readJSON('package.json'),
