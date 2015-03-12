@@ -1,5 +1,5 @@
 {
-  "name": "CoffeeScript-Karma-Grunt",
+  "name": "generator-CoffeeScript-Karma-Grunt",
   "version": "0.0.2",
   "description": "Build a new CoffeeScript project, test it with karma (Jasmine), run it with Grunt",
   "main": "CoffeeScript-Karma-0.0.1.min.js",
