@@ -30,6 +30,12 @@ Great, you are ready to write awesome code! But off course, you want to test. St
 grunt karma
 ```
 
+Karma outputs the test reports in the terminal. If you prefer a html based test report go to 'server/port/debug.html', wich probably is;
+
+```
+http://localhost:9876/debug.html
+```
+
 ### 4. Compiling
 If you would like to compile coffeeScript automatically on file change, activate the watcher. This is easily done by running the 'grunt watch' command in the terminal.
 
