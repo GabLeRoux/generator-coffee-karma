@@ -76,7 +76,7 @@ grunt coffee
 ### Building
 If your code is ready for production, simply run 'grunt' in your terminal. This will uglify the most recent compiled coffeeScript files from the 'src/javascript' directory and stores the 'projectName.min.js' in './dist'.
 
-> Make sure to compile CoffeeScripts first 'grunt coffee'
+> Make sure to compile CoffeeScripts ('grunt coffee') before running 'grunt'
 
 ```
 grunt

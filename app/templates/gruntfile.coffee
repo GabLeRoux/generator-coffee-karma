@@ -18,6 +18,12 @@ module.exports = (grunt) ->
           files:
             "dist/<%= pkg.name %>.min.js": ["src/javascript/classes/<%= pkg.name %>.classes.js", "src/javascript/<%= pkg.name %>.js"]
       },
+      bump: {
+        options: {
+          commitMessage: 'Release v%VERSION%',
+          tagMessage: 'Version %VERSION%',
+        }
+      },
       watch: {
         coffee: {
           files: ['src/coffee/**/*.coffee'],
@@ -30,7 +36,14 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-karma')
     grunt.loadNpmTasks('grunt-contrib-coffee')
     grunt.loadNpmTasks('grunt-contrib-uglify')
+    grunt.loadNpmTasks('grunt-bump')
     grunt.loadNpmTasks('grunt-contrib-watch')
 
   #   Default task
     grunt.registerTask( 'default', ['uglify'])
+
+    grunt.registerTask( 'patch', [
+      'coffee',
+      'uglify',
+      'bump:patch'
+    ])
