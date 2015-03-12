@@ -30,7 +30,7 @@ Great, you are ready to write awesome code! But off course, you want to test. St
 grunt karma
 ```
 
-Karma outputs the test reports in the terminal. If you prefer a html based test report go to 'server/port/debug.html', wich probably is;
+Karma outputs the test reports in the terminal. If you prefer a html based test report go to 'server/port/debug.html' while 'grunt karma' is running. Most likely this url is;
 
 ```
 http://localhost:9876/debug.html
