@@ -3,28 +3,33 @@ require 'coffee-errors'
 util = require 'util'
 path = require 'path'
 yeoman = require 'yeoman-generator'
-GitHubApi = require 'github'
+GitHub = require 'github'
 
-# The generator auto adds all the github information if specified
-githubUserInfo = (name, cb) ->
+githubGetUser = (name, callback) ->
   proxy = process.env.http_proxy or process.env.HTTP_PROXY or process.env.https_proxy or process.env.HTTPS_PROXY or null
-  githubOptions = version: '3.0.0'
+  options = version : '3.0.0'
 
   if proxy
     proxy = url.parse proxy
 
-    githubOptions.proxy =
+    options.proxy =
       host: proxy.hostname
       port: proxy.port
 
-  github = new GitHubApi githubOptions
+  github = new GitHub( options )
 
-  github.user.getFrom user: name, (err, res) ->
+  github.user.getFrom( user: name, (err, res) ->
     throw err  if err
-    cb JSON.parse JSON.stringify res
+    callback JSON.parse JSON.stringify res
+
+  )
+
+
+
+
 
 class CoffeeModuleGenerator extends yeoman.generators.Base
-  constructor: (args, options, config) ->
+  constructor: (args, options) ->
     super
     @currentYear = (new Date()).getFullYear()
     @on 'end', => @installDependencies skipInstall: options['skip-install']
@@ -37,34 +42,37 @@ class CoffeeModuleGenerator extends yeoman.generators.Base
     console.log @yeoman
 
     prompts = [
-      name: 'githubUser'
-      message: 'Would you mind telling me your username on GitHub?'
-      default: 'someuser'
+      name:     'githubUser'
+      message:  'Would you mind telling me your username on GitHub?'
+      default:  'someuser'
     ,
-      name: 'moduleName'
-      message: 'What\'s the name of your project?'
-      default: @_.slugify(@appname)
+      name:     'moduleName'
+      message:  'What\'s the name of your project?'
+      default:  @_.slugify(@appname)
     ,
-      name: 'moduleDescription'
-      message: 'Can you give me a short description of your project?'
-      default: 'Awesome CoffeeScript project, build with Yeoman, generator-coffeescript-karma'
+      name:     'moduleDescription'
+      message:  'Can you give me a short description of your project?'
+      default:  'Awesome CoffeeScript project, build with Yeoman'
     ]
 
-    @prompt prompts, (props) =>
+    @prompt( prompts, (props) =>
       @githubUser   = props.githubUser
       @appname      = props.moduleName
       @description  = props.moduleDescription
       @slug         = @_.slugify @appname
       done()
+    )
+
 
   userInfo: ->
     done = @async()
 
-    githubUserInfo @githubUser, (res) =>
+    githubGetUser( @githubUser, (res) =>
       @realname   = res.name
       @email      = res.email
       @githubUrl  = res.html_url
       done()
+    )
 
   projectfiles: ->
     @template '_package.json', 'package.json'
