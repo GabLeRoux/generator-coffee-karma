@@ -42,10 +42,20 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-watch')
 
   #   Default task
-    grunt.registerTask( 'default', ['uglify'])
-
-    grunt.registerTask( 'patch', [
+    grunt.registerTask( 'default', [
       'coffee',
       'uglify',
       'bump:patch'
+    ])
+
+    grunt.registerTask( 'minor', [
+      'coffee',
+      'uglify',
+      'bump:minor'
+    ])
+
+    grunt.registerTask( 'major', [
+      'coffee',
+      'uglify',
+      'bump:major'
     ])

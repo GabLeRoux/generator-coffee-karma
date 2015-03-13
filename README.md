@@ -77,13 +77,30 @@ grunt coffee
 
 > Compiled coffeeScript files are stored in the 'src/javascript' folder.
 
-### Building
-If your code is ready for production, simply run 'grunt' in your terminal. This will uglify the most recent compiled coffeeScript files from the 'src/javascript' directory and stores the 'projectName.min.js' in './dist'.
+### Building & Deploying
+If your code is ready for production, simply run 'grunt' in your terminal to deploy on github. This will do a few things;
 
-> Make sure to compile CoffeeScripts ('grunt coffee') before running 'grunt'
+ 1. Compile CoffeeScript into Javascript
+ 2. Uglify javascript to 'projectName.min.js' and saves it in './dist'
+ 3. Update the version number and create an new release
+ 4. Deploys new release on github (make sure the project is a github repo)
+
+For a patch commit, just run 'grunt'. (v0.0.1 to v0.0.2)
 
 ```
 grunt
+```
+
+For a minor commit, run 'grunt minor'. (v0.0.2 to v0.1.0)
+
+```
+grunt minor
+```
+
+for a major commit, run 'grunt major'. (v0.1.0 to v1.0.0)
+
+```
+grunt major
 ```
 
 Will output
