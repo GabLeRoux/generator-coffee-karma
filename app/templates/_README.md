@@ -41,7 +41,7 @@ grunt coffee
 If your code is ready for production, simply run 'grunt' in your terminal to deploy on github. This will do a few things;
 
  1. Compile CoffeeScript into Javascript
- 2. Build '<%= slug %>.min.js' and saves it in './dist'
+ 2. Build '<%= slug %>.min.js' and save it in './dist'
  3. Update the version number and create an new release
  4. Deploys new release on github (make sure the project is a github repo)
 
