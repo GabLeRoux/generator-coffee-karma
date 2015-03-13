@@ -5,6 +5,7 @@ module.exports = (grunt) ->
       pkg: grunt.file.readJSON('package.json'),
       bump: {
         options: {
+          commitFiles: '<%= pkg.files %>',
           commitMessage: 'Release v%VERSION%',
           tagMessage: 'Version %VERSION%',
           pushTo: 'https://github.com/lesleyduyndam/generator-coffeescript-karma.git'

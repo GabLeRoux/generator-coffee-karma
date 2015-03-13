@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "<%= description %>",
   "keywords": [
-    "keyword1",
-    "keyword2"
+    "CoffeeScript",
+    "Karma",
+    "Grunt"
   ],
+  "files": [" -a "],
   "homepage": "<%= githubUrl %>/<%= slug %>",
   "bugs": "<%= githubUrl %>/<%= slug %>/issues",
   "author": {

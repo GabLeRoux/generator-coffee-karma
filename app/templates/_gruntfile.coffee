@@ -20,8 +20,10 @@ module.exports = (grunt) ->
       },
       bump: {
         options: {
+          commitFiles: '<%= pkg.files %>',
           commitMessage: 'Release v%VERSION%',
           tagMessage: 'Version %VERSION%',
+          pushTo: '<%= pkg.repository.url %>'
         }
       },
       watch: {

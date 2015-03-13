@@ -82,7 +82,7 @@ class CoffeeKarmaGenerator extends yeoman.generators.Base
   projectfiles: ->
     @template '_package.json', 'package.json'
     @template '_README.md', 'README.md'
-    @template 'gruntfile.coffee'
+    @template '_gruntfile.coffee', 'gruntfile.coffee'
     @template '_bower.json', 'bower.json'
     @template 'bowerrc'
     @template 'karma.config.coffee'
