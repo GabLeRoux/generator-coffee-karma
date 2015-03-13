@@ -60,8 +60,8 @@ module.exports = (config) ->
     autoWatch: true
 
 
-  # start these browsers
-  # available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+  # start browser
+  # Only Chrome comes pre installed! Find more here: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome']
 
 

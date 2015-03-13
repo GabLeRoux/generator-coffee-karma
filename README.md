@@ -2,14 +2,14 @@
 A generator for Yeoman to scaffold CoffeeScript projects, test it with karma (Jasmine), run tasks with Grunt.
 
 ## Installation
-First you need to install the generator on your machine. Run the next command in the terminal;
+First you need to install the generator on your machine. Use [npm](http://www.npmjs.com) to global install the generator;
 
 ```
 npm install -g generator-coffeescript-karma
 ```
 
 
-Run yo inside the project root directory and select the 'Coffee Karma' generator.
+Run 'yo' inside the project root and select the 'Coffee Karma' generator. More information about generators on [Yeoman](http://yeoman.io/learning/index.html).
 
 ```
 yo
@@ -45,10 +45,11 @@ That's all there is to it! You can start coding, testing and building right out 
 
 ### Testing
 Great, you are ready to write awesome code! But off course, you want to run tests, lots and lots of tests. Start Karma by running the 'grunt karma' command in the terminal.
-
 ```
 grunt karma
 ```
+
+This generator installs the grunt-karma module. Although it works straight out of the box, additional configuration information can be found on [github/karma-runner/grunt-karma](https://github.com/karma-runner/grunt-karma)
 
 Karma outputs the test reports directly in the terminal. If you prefer a html based test report go to 'server/port/debug.html' while 'grunt karma' is running. Most likely this url is;
 
@@ -57,6 +58,9 @@ http://localhost:9876/debug.html
 ```
 
 > It is possible you have to refresh to get the last report
+
+At this moment, only chrome comes out of the box. If you would like to use some other browser launchers, edit the 'karma.config.coffee' file. 
+[Find more browser launchers](https://npmjs.org/browse/keyword/karma-launcher)
 
 ### Compiling
 If you would like to compile coffeeScript automatically on file change, activate the grunt watcher. This is easily done by running the 'grunt watch' command in the terminal.
