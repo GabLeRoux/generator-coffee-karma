@@ -8,16 +8,9 @@
     "Grunt"
   ],
   "files": [
-    "dist",
+    "lib",
     "src",
-    "test",
-    "bower.json",
-    "_gitignore",
-    "package.json",
-    "_gruntfile.coffee",
-    "_README.md",
-    "bowerrc",
-    "karma.config.coffee"
+    "dir"
   ],
   "homepage": "<%= githubUrl %>/<%= slug %>",
   "bugs": "<%= githubUrl %>/<%= slug %>/issues",
@@ -31,23 +24,21 @@
     "type": "git",
     "url": "<%= githubUrl %>/<%= slug %>.git"
   },
-  "dependencies": {
-    "yeoman-generator": "^0.18.10"
-  },
   "devDependencies": {
+    "coffee-errors": "^0.8.5",
     "coffee-script": "^1.9.1",
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.3.0",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-karma": "^0.10.1",
-    "grunt-bump": "^0.3.0",
     "jasmine-core": "^2.2.0",
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.7",
     "karma-coffee-preprocessor": "^0.2.1",
     "karma-html-reporter": "^0.2.6",
     "karma-jasmine": "^0.3.5",
-    "karma-jasmine-html-reporter-livereload": "^1.0.0"
   },
   "license": "MIT"
 }

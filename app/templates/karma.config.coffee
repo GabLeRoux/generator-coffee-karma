@@ -15,8 +15,11 @@ module.exports = (config) ->
 
   # list of files / patterns to load in the browser
     files: [
-      'src/coffee/**/*.coffee',
-      'test/coffee/**/*.test.coffee'
+      {pattern: 'lib/**/*.js', included: false},
+      {pattern: 'src/coffee/**/*.coffee', included: true},
+      {pattern: 'test/coffee/**/*.test.coffee', included: true},
+
+      'test-main.js'
     ]
 
 
