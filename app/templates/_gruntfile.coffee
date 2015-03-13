@@ -10,20 +10,20 @@ module.exports = (grunt) ->
       coffee: {
         compile:
           files:
-            "src/javascript/classes/<%= pkg.name %>.classes.js": "src/coffee/classes/*.coffee",
-            "src/javascript/<%= pkg.name %>.js": "src/coffee/*.coffee"
+            "src/javascript/classes/example.classes.js": "src/coffee/classes/*.coffee",
+            "src/javascript/<%= slug %>.js": "src/coffee/*.coffee"
       },
       uglify: {
         my_target:
           files:
-            "dist/<%= pkg.name %>.min.js": ["src/javascript/classes/<%= pkg.name %>.classes.js", "src/javascript/<%= pkg.name %>.js"]
+            "dist/<%= slug %>.min.js": ["src/javascript/classes/example.classes.js", "src/javascript/<%= slug %>.js"]
       },
       bump: {
         options: {
           commitFiles: '<%= pkg.files %>',
           commitMessage: 'Release v%VERSION%',
           tagMessage: 'Version %VERSION%',
-          pushTo: '<%= pkg.repository.url %>'
+          pushTo: '<%= githubUrl %>/<%= slug %>.git'
         }
       },
       watch: {

@@ -92,10 +92,10 @@ class CoffeeKarmaGenerator extends yeoman.generators.Base
 
   app: ->
     @template 'src/coffee/index.coffee', "src/coffee/#{@appname}.coffee"
-    @template 'src/coffee/classes/example.class.coffee', "src/coffee/classes/#{@appname}.class.coffee"
+    @template 'src/coffee/classes/example.class.coffee', "src/coffee/classes/example.class.coffee"
 
   tests: ->
     @template 'test/coffee/index.test.coffee', "test/coffee/#{@appname}.test.coffee"
-    @template 'test/coffee/classes/example.class.test.coffee', "test/coffee/classes/#{@appname}.class.test.coffee"
+    @template 'test/coffee/classes/example.class.test.coffee', "test/coffee/classes/example.class.test.coffee"
 
 module.exports = CoffeeKarmaGenerator

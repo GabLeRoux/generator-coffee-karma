@@ -7,7 +7,18 @@
     "Karma",
     "Grunt"
   ],
-  "files": [" -a "],
+  "files": [
+    "dist",
+    "src",
+    "test",
+    "bower.json",
+    "_gitignore",
+    "package.json",
+    "_gruntfile.coffee",
+    "_README.md",
+    "bowerrc",
+    "karma.config.coffee"
+  ],
   "homepage": "<%= githubUrl %>/<%= slug %>",
   "bugs": "<%= githubUrl %>/<%= slug %>/issues",
   "author": {
@@ -15,7 +26,7 @@
     "email": "<%= email %>",
     "url": "<%= githubUrl %>"
   },
-  "main": "./dist/<%= slug %>.min.js",
+  "main": "dist/<%= slug %>.min.js",
   "repository": {
     "type": "git",
     "url": "<%= githubUrl %>/<%= slug %>.git"
