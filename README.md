@@ -1,8 +1,9 @@
-# Generator CoffeeScript & Karma
-A Yeoman generator to scaffold CoffeeScript projects, test it with karma (Jasmine) and run build tasks with Grunt.
+# Generator Coffee Karma
+A Yeoman generator to scaffold CoffeeScript projects, who are immediately testable with karma (Jasmine).
+Grunt is configured to do building, git commits, version labeling and github pushes on the fly, yeah!
 
 ## Installation
-First you need to install the generator on your machine. Use [npm](http://www.npmjs.com) to global install the generator;
+First you need to install the generator on your machine. Use [NPM](http://www.npmjs.com) to global install the generator;
 
 ```
 npm install -g generator-coffeescript-karma
