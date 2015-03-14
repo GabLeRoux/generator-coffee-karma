@@ -15,11 +15,17 @@ module.exports = (config) ->
 
   # list of files / patterns to load in the browser
     files: [
-      {pattern: 'lib/**/*.js', included: false},
-      {pattern: 'src/coffee/**/*.coffee', included: true},
-      {pattern: 'test/coffee/**/*.test.coffee', included: true},
 
-      'test-main.js'
+    # Load al the libraries your build needs while testing
+      {pattern: 'lib/**/*.js', included: false},
+
+    # Load all the CoffeeScripts
+      {pattern: 'src/coffee/classes/*.coffee', included: true},
+      {pattern: 'src/coffee/*.coffee', included: true},
+
+    # Load all the karma tests
+      {pattern: 'test/coffee/classes/*.coffee', included: true},
+      {pattern: 'test/coffee/*.test.coffee', included: true}
     ]
 
 

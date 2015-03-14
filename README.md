@@ -71,41 +71,40 @@ At this moment, only chrome comes out of the box. If you would like to use anoth
 [Find more browser launchers](https://npmjs.org/browse/keyword/karma-launcher)
 
 ### Compiling
-If you would like to compile coffeeScript automatically on file change, activate the grunt watcher. This is easily done by running the 'grunt watch' command in the terminal.
-
-```
-grunt watch
-```
-
-Otherwise, you could run 'grunt coffee' in the terminal to compile the CoffeeScript files manually.
-
-```
-grunt coffee
-```
-
-> Compiled coffeeScript files are stored in the 'src/javascript' folder.
-
-### Building & Deploying
-If your code is ready for production, simply run 'grunt' in your terminal to deploy on github. This will do a few things;
-
- 1. Compile CoffeeScript into Javascript
- 2. Build 'projectName.min.js' and save it in './dist'
- 3. Update the version number and create an new release
- 4. Deploys new release on github (make sure the project is a github repo)
-
-For a patch commit, just run 'grunt'. (v0.0.1 to v0.0.2)
+You could run 'grunt' in the terminal to compile & uglify the CoffeeScript files manually.
 
 ```
 grunt
 ```
 
-For a minor commit, run 'grunt minor'. (v0.0.2 to v0.1.0)
+If you would like to compile & uglify coffeeScript automatically on file change, activate the grunt watcher. This is easily done by running the 'grunt watch' command in the terminal.
+
+```
+grunt watch
+```
+
+### Building & Deploying
+If your code is ready for production, simply run 'grunt:patch', 'grunt:minor' or 'grunt:major' in your terminal to deploy on github. This will do a few things;
+
+ 1. Compile CoffeeScript into Javascript.
+ 2. Build 'projectName.js' & 'projectName.min.js' and save it in './dist'.
+ 3. Update the version number and create an new release.
+ 4. Commit & push new release to github (make sure the project is a github repo).
+
+
+For a patch commit & push, just run 'grunt patch'. (v0.0.1 to v0.0.2)
+
+```
+grunt patch
+```
+
+For a minor commit & push, run 'grunt minor'. (v0.0.2 to v0.1.0)
 
 ```
 grunt minor
 ```
 
-for a major commit, run 'grunt major'. (v0.1.0 to v1.0.0)
+for a major commit & push, run 'grunt major'. (v0.1.0 to v1.0.0)
 
 ```
 grunt major

@@ -10,78 +10,68 @@ module.exports = (grunt) ->
       coffee: {
         compile:
           files:
-            "src/javascript/classes/example.classes.js": "src/coffee/classes/*.coffee",
-            "src/javascript/<%= slug %>.js": "src/coffee/*.coffee"
+            "dist/<%= slug %>.js": ["src/coffee/classes/*.coffee", "src/coffee/*.coffee"]
       },
       uglify: {
         my_target:
           files:
-            "dist/<%= slug %>.min.js": ["src/javascript/classes/example.classes.js", "src/javascript/<%= slug %>.js"]
+            "dist/<%= slug %>.min.js": ["dist/<%= slug %>.js"]
       },
       bump: {
         options: {
-          commitFiles: '<%= pkg.files %>',
+          commitFiles: <%= pkg_template_files %>,
           commitMessage: 'Release v%VERSION%',
           tagMessage: 'Version %VERSION%',
           pushTo: '<%= githubUrl %>/<%= slug %>.git'
         }
       },
-      requirejs: {
-        compile: {
-          options: {
-            baseUrl: '',
-            out: "dist/<%= slug %>requirejs.min.js",
-            uglify: {
-              toplevel: true,
-              ascii_only: true,
-              beautify: true,
-              max_line_length: 1000,
-
-#            //How to pass uglifyjs defined symbols for AST symbol replacement,
-#            //see "defines" options for ast_mangle in the uglifys docs.
-              defines: {
-                DEBUG: ['name', 'false']
-              },
-
-#            //Custom value supported by r.js but done differently
-#            //in uglifyjs directly:
-#            //Skip the processor.ast_mangle() part of the uglify call (r.js 2.0.5+)
-              no_mangle: true
-            }
-          }
+      shell:
+        git_add: {
+          command: 'git add -A'
         }
       },
       watch: {
         coffee: {
           files: ['src/coffee/**/*.coffee'],
           tasks: ['coffee']
-        }
+        },
+        uglify: {
+          files: ['dist/**/*.js'],
+          task:  ['uglify']
       }
     }
 
-  #    Load the plugin
+    #    Load the plugin
     grunt.loadNpmTasks('grunt-karma')
     grunt.loadNpmTasks('grunt-contrib-coffee')
     grunt.loadNpmTasks('grunt-contrib-uglify')
+    grunt.loadNpmTasks('grunt-shell')
     grunt.loadNpmTasks('grunt-bump')
-    grunt.loadNpmTasks('grunt-contrib-requirejs')
     grunt.loadNpmTasks('grunt-contrib-watch')
 
-  #   Default task
+    #   Default task
     grunt.registerTask( 'default', [
       'coffee',
       'uglify',
+    ])
+
+    grunt.registerTask( 'patch', [
+      'coffee',
+      'uglify',
+      'shell:git_add',
       'bump:patch'
     ])
 
     grunt.registerTask( 'minor', [
       'coffee',
       'uglify',
+      'shell:git_add',
       'bump:minor'
     ])
 
     grunt.registerTask( 'major', [
       'coffee',
       'uglify',
+      'shell:git_add',
       'bump:major'
     ])

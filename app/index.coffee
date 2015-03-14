@@ -31,6 +31,19 @@ githubGetUser = (name, callback) ->
     callback JSON.parse JSON.stringify res
   )
 
+buildString = ( files ) ->
+  bufferString = '['
+
+  last = files.length - 1
+  counter = 0;
+
+  for filename in files
+    do (filename ) ->
+      bufferString += '"' + filename + '"'
+      bufferString += if counter != last  then ", " else "]"
+      counter++
+
+  bufferString
 
 #
 class CoffeeKarmaGenerator extends yeoman.generators.Base
@@ -38,7 +51,12 @@ class CoffeeKarmaGenerator extends yeoman.generators.Base
     super
     @currentYear = (new Date()).getFullYear()
     @on 'end', => @installDependencies skipInstall: options['skip-install']
-    @pkg = JSON.parse @readFileAsString path.join __dirname, '../package.json'
+
+    @pkg_generator      = JSON.parse @readFileAsString path.join __dirname, '../package.json'
+    @pkg_template       = JSON.parse @readFileAsString path.join __dirname, 'templates/_package.json'
+    @pkg_template_files = buildString(  @pkg_template.files )
+
+    console.log( @pkg_template_files )
 
   askFor: ->
     done = @async()
@@ -91,6 +109,7 @@ class CoffeeKarmaGenerator extends yeoman.generators.Base
     @copy '_gitignore', '.gitignore'
 
   app: ->
+    @mkdir 'dist'
     @template 'src/coffee/index.coffee', "src/coffee/#{@appname}.coffee"
     @template 'src/coffee/classes/example.class.coffee', "src/coffee/classes/example.class.coffee"
 

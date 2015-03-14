@@ -1,20 +1,12 @@
 ###
-  First example test to get you started
-
-  USAGE
-  - Make sure you have installed all the dependencies
-    ( run: npm install )
-  - Start testing with Jasmine and auto run the tests with Karma
-    ( run: grunt karma )
+  index test
 ###
 
-describe 'The store', ->
+describe 'index', ->
 
-  it 'should have a name', ->
-    expect( getName() ).toEqual( 'apples' )
+# Assign an instance of the EXAMPLE class to a variable to make it testable
+  it 'should have a example object.', ->
+    expect( indexExample ).toBeDefined()
 
-  it 'should be adding single products by restocking', ->
-    expect( restock( 5 ) ).toBe( 5 )
-
-  it 'should be removing products from stock when sold', ->
-    expect( sell( 1 ) ).toBe( 4 )
+  it 'should have a method who returns a property with the value true.', ->
+    expect( indexExample.method() ).toBeTruthy()

@@ -1,5 +1,5 @@
 {
-  "name": "generator-coffee-karma",
+  "name": "generator-coffee-karma-development",
   "version": "0.1.1",
   "description": "A generator for Yeoman to scaffold a CoffeeScript project, easily testable with Karma (Jasmine)",
   "keywords": [
