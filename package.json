@@ -12,6 +12,13 @@
     "karma",
     "Jasmine"
   ],
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "scripts": {
+    "test": "Grunt karma"
+  },
   "files": [
     "app"
   ],
