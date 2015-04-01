@@ -6,7 +6,7 @@ Grunt is configured to do building, git commits, version labeling and github pus
 First you need to install the generator on your machine. Use [NPM](http://www.npmjs.com) to global install the generator;
 
 ```
-npm install -g generator-coffeescript-karma
+npm install -g generator-coffee-karma
 ```
 
 Run 'yo coffee-karma' or 'yo' inside the project root and select the 'Coffee Karma' generator. More information about generators on [Yeoman](http://yeoman.io/learning/index.html).
